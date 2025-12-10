@@ -55,5 +55,11 @@ img{
     height: 275px;
     border-radius: 6px;
     object-fit: contain;
-    
+
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 60px);
 }
