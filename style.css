@@ -63,5 +63,4 @@ img{
     display: flex;
     justify-content: center;
     height: calc(100vh - 60px);
-    border: 2px solid #f2a0cd;
 }
