@@ -29,7 +29,7 @@ img{
 }
 
 .image-row img {
-    width:min-content;
-    height:min-content;
+    width:250pt;
+    height:280pt;
     border-radius: 6px;
 }
