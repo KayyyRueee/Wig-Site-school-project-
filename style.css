@@ -15,8 +15,8 @@ p{
 }
 
 img{
-    width: 175pt;
-    height: 200pt;
+    width: 250px;
+    height: 275px;
     text-align: center;
 }
 .image-row {
@@ -29,7 +29,7 @@ img{
 }
 
 .image-row img {
-    width: 175pt;
+    width: 250px;
     height: auto;
     border-radius: 6px;
 }
