@@ -18,6 +18,7 @@ body{
 .sticky-banner .logo{
     font-family: Darling Modern;
     font-size: medium;
+    text-align: left;
 }
 
 .sticky-banner .search{
