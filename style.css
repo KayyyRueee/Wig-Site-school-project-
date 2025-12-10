@@ -55,7 +55,7 @@ img{
     height: 275px;
     border-radius: 6px;
     object-fit: contain;
-    border: 2px #f2a0cd;
+    border: 2px solid #f2a0cd;
 
 }
 
