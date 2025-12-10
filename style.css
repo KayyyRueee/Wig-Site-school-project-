@@ -22,7 +22,7 @@ img{
 .image-row {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     padding: 40px;
     max-width: 90%;
     margin: 0 auto;
