@@ -7,6 +7,30 @@ body{
     margin: 0;
 }
 
+.sticky-banner{
+    position: sticky;
+    background-color:#412903 ;
+    width: 100%;
+    color: #f2a0cd;
+    padding: 10px 20px;
+    display:flex;
+    justify-content: center;
+
+}
+
+.sticky-banner .logo{
+    font-family: Darling Modern;
+    font-size: medium;
+}
+
+.sticky-banner .search{
+    font-size: medium;
+}
+
+.sticky-banner .cart{
+    font-size: medium;
+}
+
 p{
     font-family: Aparajita;
     font-size: medium;
