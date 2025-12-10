@@ -52,6 +52,7 @@ img{
 
 .image-row img {
     width: 250px;
-    height: auto;
+    height: 275px;
     border-radius: 6px;
+    object-fit: cover;
 }
