@@ -39,6 +39,7 @@ img{
     width: 250px;
     height: 275px;
     text-align: center;
+    border: 2px solid #f2a0cd;
 }
 .image-row {
     display: flex;
