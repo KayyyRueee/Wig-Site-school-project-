@@ -35,5 +35,39 @@
             </div>
         </div>
     </div>
+<script>
+    const products = [
+        "Straight Wigs",
+        "Curly Wigs",
+        "Premade Colored Wigs", 
+        "Custom Straight Wigs",
+        "Custom Curly Wigs"
+    ];
+
+    const searchBox = document.getElementById("searchBox");
+    const results = document.getElementById("searchResults");
+
+    searchBox.addEventListener("input", function(){
+        const input = this.value.toLowerCase();
+        results.innerHTML = "";
+
+        if(input) {
+            const filtered = products.filter(p => p.toLowerCase().includes(input));
+            filtered.forEach(item => {
+                const div = document.createElement("div");
+                div.textContent = item;
+                div.addEventListener("click", () => {
+                    alert(`You clicked ${item}`);
+                    searchBox.value = "";
+                    results.style.display = "none";
+                });
+                results.appendChild(div);
+            });
+            results.style.display = filtered,length ? "block" : "none";
+        } else {
+            results.style.display = "none";
+        }
+    });
+</script>
 </body>
 </html>
