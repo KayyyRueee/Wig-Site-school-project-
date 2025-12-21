@@ -75,6 +75,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  #93457062;
 }
 
 .image-box img{
