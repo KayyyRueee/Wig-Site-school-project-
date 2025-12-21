@@ -65,7 +65,17 @@ body{
 }
 
 .sticky-banner .cart{
-    font-size: 30px;
+    font-size: 26px;
+    text-decoration: none;
+    color: #f2a0cd;
+}
+
+.cart:visited{
+    color: #f2a0cd;
+}
+
+.cart:hover{
+    cursor: pointer;
 }
 
 p{
