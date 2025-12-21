@@ -164,7 +164,7 @@ img{
     display: none;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 727px) {
     .sticky-banner{
         position: fixed;
         top: 0;
@@ -195,7 +195,7 @@ img{
     }
 }
 
-@media(max-width: 768px){
+@media(max-width: 727px){
     .image-box{
         width: 150px;
         height: 150px;
