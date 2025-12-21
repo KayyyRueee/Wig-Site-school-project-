@@ -178,8 +178,8 @@ img{
     }
     .search{
         flex: 0 1 auto;
-        width: 60%;
-        margin: 0 10px;
+        max-width: 150px;
+        margin: 0 5px;
     }
     #searchBox{
         width: 60%;
