@@ -174,8 +174,12 @@ img{
         padding: 10px 15px;
     }
     .search{
-        flex: 1;
+        flex: 0 1 auto;
+        width: 60%;
         margin: 0 10px;
+    }
+    .cart{
+        font-size: 24px;
     }
 }
 
