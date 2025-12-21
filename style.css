@@ -182,3 +182,19 @@ img{
         font-size: 16px;
     }
 }
+
+footer{
+    color:#f2a0cd;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer a{
+    color: #f2a0cd;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
