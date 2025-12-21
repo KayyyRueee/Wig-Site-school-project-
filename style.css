@@ -206,10 +206,12 @@ table{
     border-collapse: collapse;
     color: #f17cbd;
     background-color: #412903;
+    font-size: 18px;
+    border-color: #f2a0cd;
 }
 
 th, td{
-    border: 1px soild #f17cbd;
+    border-color: 1px soild #f17cbd;
     padding: 10px;
     text-align: center;
 }
