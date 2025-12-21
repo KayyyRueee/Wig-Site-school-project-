@@ -86,7 +86,7 @@ img{
 .overlay-text{
     position: absolute;
     color: #332002;;
-    background-color: rgba(0, 0, 0, 0, 0.5);
+    background-color:  #93457062;
     padding: 6px 10px;
     border-radius: 4px;
     font-size: 20px;
