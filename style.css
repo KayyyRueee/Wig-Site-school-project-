@@ -181,6 +181,9 @@ img{
     .cart{
         font-size: 24px;
     }
+    .logo{
+        font-size: 28px;
+    }
 }
 
 @media(max-width: 768px){
