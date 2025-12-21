@@ -170,19 +170,28 @@ img{
         top: 0;
         left: 0;
         z-index: 1000;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
     }
     .search{
         flex: 0 1 auto;
         width: 60%;
         margin: 0 10px;
     }
+    #searchBox{
+        width: 100%;
+        font-size: 12px;
+    }
     .cart{
         font-size: 24px;
+        flex-shrink: 0;
     }
     .logo{
         font-size: 28px;
+        flex-shrink: 0;
     }
 }
 
