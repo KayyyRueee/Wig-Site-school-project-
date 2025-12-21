@@ -103,6 +103,14 @@ img{
     text-align: center;
 }
 
+.no-overlay::before{
+    display: none;
+}
+
+.no-overlay .overlay-text{
+    display: none;
+}
+
 @media(max-width: 768px) {
     .sticky-banner{
         position: fixed;
