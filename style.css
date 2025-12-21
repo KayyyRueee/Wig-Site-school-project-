@@ -199,3 +199,22 @@ footer a{
 footer a:hover{
     text-decoration: underline;
 }
+
+table{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #f17cbd;
+    background-color: #412903;
+}
+
+th, td{
+    border: 1px soild #f17cbd;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    color: #f2a0cd;
+    font-weight: bold;
+}
