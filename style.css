@@ -34,6 +34,36 @@ body{
     font-size: 30px;
 }
 
+#searchBox{
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #412903;
+    outline: none;
+}
+
+.search-results{
+    position: absolute;
+    background-color: #412903;
+    color: #f2a0cd;
+    border: #412903;
+    margin-top: 2px;
+    width: 200px;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10;
+}
+
+.search-results div{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-results div:hover{
+    background-color: #f17cbd33;
+}
+
 .sticky-banner .cart{
     font-size: 30px;
 }
