@@ -18,6 +18,16 @@ body{
 .sticky-banner .logo{
     font-family: "Great Vibes", cursive;
     font-size: 32px;
+    color: #f2a0cd;
+    text-decoration: none;
+}
+
+.logo:visited{
+    color: #f2a0cd;
+}
+
+.logo:hover{
+    cursor: pointer;
 }
 
 .sticky-banner .search{
