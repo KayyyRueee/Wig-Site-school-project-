@@ -274,6 +274,7 @@ h1, h2{
     color: #b39b75;
     font-family: "Playfair Display";
     font-size: large;
+    text-align: center;
 }
 
 #cartItems div {
