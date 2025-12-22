@@ -50,7 +50,7 @@
 
 <script>
 
-    let cart = JSON,parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let cartDiv = document.getElementById('cartItems');
     let totalDiv = document.getElementById('total');
     let totalPrice = 0;
