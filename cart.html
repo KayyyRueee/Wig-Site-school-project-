@@ -36,7 +36,8 @@
         <button type="submit">Submit</button>
     </form>
 
-    <p>Your cart is empty :(</p>
+    <p id="emptyCartMsg">Your cart is empty :(</p>
+
 
     <div id="cartItems"></div>
     <h2 id="total"></h2>
@@ -53,7 +54,7 @@
 </footer>
 
 <script>
-    
+
     let cartDiv = document.getElementById('cartItems');
     let totalDiv = document.getElementById('total');
 
