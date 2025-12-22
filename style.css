@@ -275,3 +275,52 @@ h1, h2{
     font-family: "Playfair Display";
     font-size: large;
 }
+
+#cartItems div {
+    background-color: #412903;
+    color: #f2a0cd;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+#cartItems div button {
+    background-color: #f17cbd;
+    color: #412903;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cartItems div button:hover {
+    background-color: #f2a0cd;
+}
+
+#total {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #f17cbd;
+}
+
+.checkout-btn {
+    display: block;
+    background-color: #f17cbd;
+    color: #412903;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background-color: #f2a0cd;
+}
