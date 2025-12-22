@@ -247,3 +247,25 @@ th{
     color: #f2a0cd;
     font-weight: bold;
 }
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-name, 
+.product-price{
+    margin: 5px 0;
+    color: #f2a0cd;
+    text-align: center;
+}
+
+.product button{
+    color: #f17cbd;
+    background-color: #7732b7;
+}
+
+.product button:hover{
+    background-color: #f17cbd33;
+}
