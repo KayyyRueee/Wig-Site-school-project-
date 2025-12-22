@@ -177,12 +177,14 @@ img{
         flex-wrap: nowrap;
     }
     .search{
-        flex: 1;
-        margin: 0 10px;
+        flex: 1 1 auto;
+        max-width: 120px;
+        margin: 0 5px;
     }
     #searchBox{
         width: 100%;
         font-size: 12px;
+        padding: 4px 6px;
     }
     .cart{
         font-size: 24px;
