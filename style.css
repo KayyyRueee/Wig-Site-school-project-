@@ -291,7 +291,7 @@ h1, h2{
 
 #cartItems div button {
     background-color: #f17cbd;
-    color: #412903;
+    color: #7732b783;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
@@ -322,5 +322,5 @@ h1, h2{
 }
 
 .checkout-btn:hover {
-    background-color: #f2a0cd;
+    background-color: #93457062;
 }
