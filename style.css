@@ -269,3 +269,8 @@ th{
 .product button:hover{
     background-color: #f17cbd33;
 }
+
+h1, h2{
+    color: #b39b75;
+    
+}
