@@ -52,58 +52,66 @@
 </footer>
 
 <script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cartDiv = document.getElementById('cartItems');
+let totalDiv = document.getElementById('total');
+let totalPrice = 0;
 
-    let cartDiv = document.getElementById('cartItems');
-    let totalDiv = document.getElementById('total');
+if(cart.length === 0){
+    cartDiv.innerHTML = "<p>Your cart is empty :(</p>";
+} else {
+    cart.forEach((item, index) => {
+        let div = document.createElement('div');
+        div.innerHTML = `${item.name} - ${item.price} <button onclick="removeItem(${index})">Remove</button>`;
+        cartDiv.appendChild(div);
+        totalPrice += item.price;
+    });
+    totalDiv.textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
 
+function removeItem(index){
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload();
+}
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Thank you! Your request has been submitted.");
+});
 
+const products = [
+    "Straight Wigs",
+    "Curly Wigs",
+    "Premade Colored Wigs", 
+    "Kustom Straight Wigs",
+    "Kustom Curly Wigs"
+];
 
-    function renderCart() {
-        cartDiv.innerHTML = ''; 
-        let totalPrice = 0;
-         
-            cart.forEach((item, index) => {
-                let div = document.createElement('div');
-                div.innerHTML = `${item.name} - ${item.price} <button onclick="removeItem(${index})">Remove</button>`;
-                cartDiv.appendChild(div);
-                totalPrice += parseFloat(item.price.replace('$','')) || 0;
+const searchBox = document.getElementById("searchBox");
+const results = document.getElementById("searchResults");
+
+searchBox.addEventListener("input", function(){
+    const input = this.value.toLowerCase();
+    results.innerHTML = "";
+
+    if(input) {
+        const filtered = products.filter(p => p.toLowerCase().includes(input));
+        filtered.forEach(item => {
+            const div = document.createElement("div");
+            div.textContent = item;
+            div.addEventListener("click", () => {
+                alert(`You clicked ${item}`);
+                searchBox.value = "";
+                results.style.display = "none";
             });
-        }
-
-        totalDiv.textContent = `Total: $${totalPrice}`;
-    }
-
-  
-    function removeItem(index){
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
-    }
-
-    renderCart();
-
-   
-    const buttons = document.querySelectorAll('.add-to-cart');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const product = button.closest('.product');
-            const name = product.querySelector('.product-name').textContent;
-            const price = product.querySelector('.product-price').textContent;
-
-            cart.push({ name, price });
-            localStorage.setItem('cart', JSON.stringify(cart));
-
-            renderCart();
-            alert(`${name} added to cart!`);
+            results.appendChild(div);
         });
-    });
-
-    document.getElementById("orderForm").addEventListener("submit", function(e){
-        e.preventDefault();
-        alert("Thank you! Your request has been submitted.");
-    });
+        results.style.display = filtered.length ? "block" : "none";
+    } else {
+        results.style.display = "none";
+    }
+});
 </script>
 
 </body>
