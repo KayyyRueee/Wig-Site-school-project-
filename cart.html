@@ -35,6 +35,10 @@
         <button type="submit">Submit</button>
     </form>
 
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <h2 id="total"></h2>
+
 <footer>
     <p>Helpful Tips for Beginners</p>
     <ul>
@@ -45,6 +49,26 @@
 </footer>
 
 <script>
+
+    let cart = JSON,parse(localStorage.getItem('cart')) || [];
+    let cartDiv = document.getElementById('cartItems');
+    let totalDiv = document.getElementById('total');
+    let totalPrice = 0;
+    cart.forEach((item, index) => {
+        let div = document.createElement('div');
+        div.innerHTML = `${item.name} - $${item.price} <button onclick="removeItem(${index})">Remove</button>`;
+        cartDiv.appendChild(div);
+        totalPrice += item.price;
+    });
+
+    totalDiv.textContent = `Total: $${totalPrice}`;
+
+    function removeItem(index){
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload();
+    }
+
     document.getElementById("orderForm").addEventListener("submit", function(e){
         e.preventDefault();
         alert("Thank you! Your request has been submitted.")
