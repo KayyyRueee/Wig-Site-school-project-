@@ -30,7 +30,7 @@
                 </div>
                 <p class="product-name">Honey Blonde</p>
                 <p class="product-price">$175</p>
-                <button onclick="addToCart"('Honey Blonde')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -40,7 +40,7 @@
                 </div>
                 <p class="product-name">Black Betty with silver Saddle</p>
                 <p class="product-price">$175</p>
-                <button onclick="addToCart"('Black Betty with Silver Saddle')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -50,7 +50,7 @@
                 </div>
                 <p class="product-name">613 Blonde</p>
                 <p class="product-price">$193</p>
-                <button onclick="addToCart"('613 Blonde')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -60,7 +60,7 @@
                 </div>
                 <p class="product-name">Dark Ginger</p>
                 <p class="product-price">$215</p>
-                <button onclick="addToCart"('Dark Ginger')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -70,7 +70,7 @@
                 </div>
                 <p class="product-name">Jet Black Bob</p>
                 <p class="product-price">$145</p>
-                <button onclick="addToCart"('Jet Black Bob')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -80,7 +80,7 @@
                 </div>
                 <p class="product-name">Brown with Bangs</p>
                 <p class="product-price">$165</p>
-                <button onclick="addToCart"('Brown with Bangs')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -90,7 +90,7 @@
                 </div>
                 <p class="product-name">Brown with Blonde Highlights</p>
                 <p class="product-price">$190</p>
-                <button onclick="addToCart"('Brown with Blonde Highlights')>
+                <button onclick="addToCart">
                     Add To Cart
                 </button>
             </div>
@@ -140,13 +140,22 @@
             results.style.display = "none";
         }
     });
-    let cart = [];
+   const buttons = document.querySelectorAll('.add-to-cart');
 
-function addToCart(name, price) {
-    cart.push({name, price});
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${name} added to cart!`);
-}
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const product = button.closest('.product');
+        const name = product.querySelector('.product-name').textContent;
+        const price = product.querySelector('.product-price').textContent;
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name, price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert(`${name} added to cart!`);
+    });
+});
+
 </script>
 </body>
 </html>
