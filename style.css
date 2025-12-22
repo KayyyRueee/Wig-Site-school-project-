@@ -13,6 +13,7 @@ body{
     display:flex;
     justify-content: space-evenly;
     z-index: 1000;
+    box-sizing: border-box;
 
 }
 
