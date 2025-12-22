@@ -277,6 +277,12 @@ h1, h2{
     text-align: center;
 }
 
+h3{
+    color: #b39b75;
+    font-family: "Playfair Display";
+    font-size: large;
+}
+
 #cartItems div {
     background-color: #412903;
     color: #f2a0cd;
