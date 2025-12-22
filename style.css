@@ -187,11 +187,11 @@ img{
         padding: 4px 6px;
     }
     .cart{
-        font-size: 24px;
+        font-size: 18px;
         flex-shrink: 0;
     }
     .logo{
-        font-size: 28px;
+        font-size: 20px;
         flex-shrink: 0;
     }
 }
