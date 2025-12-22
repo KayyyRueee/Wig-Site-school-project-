@@ -60,26 +60,19 @@
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
-    let emptyMsg = document.querySelector('#emptyCartMsg');
-
-
     function renderCart() {
         cartDiv.innerHTML = ''; 
         let totalPrice = 0;
-
-        if(cart.length === 0) {
-            if(emptyMsg) emptyMsg.style.display = 'block'; 
-        } else {
-            if(emptyMsg) emptyMsg.style.display = 'none'; 
+         
             cart.forEach((item, index) => {
                 let div = document.createElement('div');
-                div.innerHTML = `${item.name} - $${item.price} <button onclick="removeItem(${index})">Remove</button>`;
+                div.innerHTML = `${item.name} - ${item.price} <button onclick="removeItem(${index})">Remove</button>`;
                 cartDiv.appendChild(div);
                 totalPrice += parseFloat(item.price.replace('$','')) || 0;
             });
         }
 
-        totalDiv.textContent = `Total: ${totalPrice}`;
+        totalDiv.textContent = `Total: $${totalPrice}`;
     }
 
   
